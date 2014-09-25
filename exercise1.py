@@ -11,7 +11,7 @@ Example:
 
 """
 
-__author__ = 'Susan Sim'
+__author__ = 'Susan Sim, Natasha Gandhi'
 __email__ = "ses@drsusansim.org"
 
 __copyright__ = "2014 Susan Sim"
