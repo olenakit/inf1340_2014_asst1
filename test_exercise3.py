@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-import pytest
 from exercise3 import decide_rps
-
 
 def test_rps():
     """
@@ -18,30 +16,7 @@ def test_rps():
     assert decide_rps("Paper", "Rock") == 1
     assert decide_rps("Paper", "Paper") == 0
 
+# Inputs that are incorrect format and length
 
-    # Inputs that are incorrect format and length
-
-     with pytest.raises(ValueError):
-        decide_rps("Rock","Spock")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    with pytest.raises(NameError):
+        decide_rps("Rock", "Spock")
