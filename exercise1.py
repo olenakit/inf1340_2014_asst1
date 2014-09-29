@@ -12,7 +12,7 @@ Example:
 """
 
 __author__ = 'Natasha Gandhi, Olena Kit'
-__email__ = "ses@drsusansim.org, olena.kit@mail.utoronto.ca"
+__email__ = "natasha's email, olena.kit@mail.utoronto.ca"
 
 __copyright__ = "2014 Natasha Gandhi and Olena Kit"
 __license__ = "MIT License"
