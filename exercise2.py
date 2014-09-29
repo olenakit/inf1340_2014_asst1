@@ -30,14 +30,10 @@ def checksum(upc):
         :param upc: a 12-digit universal product code
         :return: type ('string') or length
         """
+        if input(upc) != str:
+            raise ValueError
 
-        if checksum(upc) == 12:
-            print("True")
-
-
-
-
-            If
+        print(input(17282))
 
         return type
 

@@ -9,7 +9,7 @@ other inputs will result in an error.
 """
 
 __author__ = 'Natasha Gandhi and Olena Kit'
-__email__ = "natashas email and olena.kit@mail.utoronto.ca"
+__email__ = "tash.gandhi@mail.utoronto.ca and olena.kit@mail.utoronto.ca"
 
 
 # Rock Paper Scissor Table
@@ -49,10 +49,6 @@ def decide_rps(player1, player2):
 
 #If there is an error
     else:
-        raise NameError("Invalid name. Choose Rock, Paper, or Scissors.")
+        raise ValueError("Invalid name. Choose Rock, Paper, or Scissors.")
 
 
-# Testing to see if the function works successfully...
-print("The winner is Player", decide_rps("Rock", "Rock"))
-print("The winner is Player", decide_rps("Rock", "Scissors"))
-print("The winner is Player", decide_rps("Rock", "Paper"))

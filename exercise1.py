@@ -40,7 +40,7 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-    letter_grade = ""
+    letter_grade = "letter_to_gpa"
     gpa = 0.0
 
    if type(grade) is 'A':
@@ -64,8 +64,25 @@ def grade_to_gpa(grade):
 
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
+    if letter_grade == "A+":
+        gpa = 4.0
     if letter_grade == "A":
         gpa = 4.0
+    if letter_grade == "A-":
+        gpa = 3.7
+    if letter_grade == "B+":
+        gpa = 3.3
+    if letter_grade == "B":
+        gpa == 3.0
+    if letter_grade == "B-":
+        gpa = 2.7
+    if letter_grade == "FZ":
+        gpa = 0.0
 
     return gpa
+
+print(grade_to_gpa("A"))
+
+
+
 
