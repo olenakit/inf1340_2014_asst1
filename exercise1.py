@@ -11,10 +11,10 @@ Example:
 
 """
 
-__author__ = 'Susan Sim, Natasha Gandhi'
-__email__ = "ses@drsusansim.org"
+__author__ = 'Natasha Gandhi, Olena Kit'
+__email__ = "ses@drsusansim.org, olena.kit@mail.utoronto.ca"
 
-__copyright__ = "2014 Susan Sim"
+__copyright__ = "2014 Natasha Gandhi and Olena Kit"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
@@ -43,14 +43,19 @@ def grade_to_gpa(grade):
     letter_grade = ""
     gpa = 0.0
 
+   if type(grade) is 'A':
+       print ("GPA is 3")
+   If type(grade) is  range (80,89):
+        print ("GPA is 3")
+
     if type(grade) is str:
         print ("letter") # remove this line once the code is implemented
-        # check that the grade is one of the accepted values
+        # check that the grade is one of the accepted values -- a to f
         # assign grade to letter_grade
     elif type(grade) is int:
         print("mark") # remove this line once the code is implemented
-        # check that grade is in the accepted range
-        # convert the numeric grade to a letter grade
+        # check that grade is in the accepted range 0 to 100
+        # convert the numeric grade to a letter grade  -- specify numbers 40=F
         # assign the value to letter_grade
         # hint: letter_grade = mark_to_letter(grade)
     else:
