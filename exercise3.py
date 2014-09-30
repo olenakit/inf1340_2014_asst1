@@ -51,4 +51,16 @@ def decide_rps(player1, player2):
     else:
         raise ValueError("Invalid name. Choose Rock, Paper, or Scissors.")
 
+rps_results = {}
+rps_results [("Rock, Rock")] =
+rps_results [("Rock", "Scissors")] =
+rps_results [("Rock", "Paper")] =
+rps_results [("Scissors", "Scissors")] =
+rps_results [("Scissors","Paper")] =
+rps_results [("Scissors", "Rock")] =
+rps_results [("Rock","Rock")] =
+rps_results [("Rock","Paper")] =
+rps_results [("Rock", "Scissors")] =
+
+
 
