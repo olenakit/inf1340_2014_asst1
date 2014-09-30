@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
 
-""" Assignment 1, Exercise 3, INF1340, Fall, 2014. Rock, Paper, Scissors
-
-This module contains one function decide_rps. It can be passed a parameter
-that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
-other inputs will result in an error.
+"""
+Rock, Paper, Scissors
+Assignment 1, Exercise 3, INF1340, Fall, 2014.
 
 """
 
-__author__ = 'Natasha Gandhi and Olena Kit'
-__email__ = "tash.gandhi@mail.utoronto.ca and olena.kit@mail.utoronto.ca"
+__author__ = 'Natasha Gandhi, Olena Kit'
+__email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
 
 # Rock Paper Scissor Table
@@ -51,16 +49,16 @@ def decide_rps(player1, player2):
     else:
         raise ValueError("Invalid name. Choose Rock, Paper, or Scissors.")
 
+
 rps_results = {}
-rps_results [("Rock, Rock")] =
-rps_results [("Rock", "Scissors")] =
-rps_results [("Rock", "Paper")] =
-rps_results [("Scissors", "Scissors")] =
-rps_results [("Scissors","Paper")] =
-rps_results [("Scissors", "Rock")] =
-rps_results [("Rock","Rock")] =
-rps_results [("Rock","Paper")] =
-rps_results [("Rock", "Scissors")] =
+rps_results[("Rock", "Rock")] = 0
+rps_results[("Rock", "Scissors")] = 1
+rps_results[("Rock", "Paper")] = 2
+rps_results[("Scissors", "Scissors")] = 0
+rps_results[("Scissors", "Paper")] = 1
+rps_results[("Scissors", "Rock")] = 2
+rps_results[("Paper", "Paper")] = 0
+rps_results[("Paper", "Rock")] = 1
+rps_results[("Paper", "Scissors")] = 2
 
-
-
+return decide_rps()
