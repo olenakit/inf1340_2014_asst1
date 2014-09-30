@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+"""
+Rock, Paper, Scissors
+Assignment 1, Exercise 3, INF1340, Fall, 2014.
+Module to test exercise3.py
+"""
+
+__author__ = 'Natasha Gandhi, Olena Kit'
+__email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
+
+#Input the function decide_rps from exercise3.py
+
 from exercise3 import decide_rps
 
 def test_rps():
@@ -18,5 +29,5 @@ def test_rps():
 
 # Inputs that are incorrect format and length
 
-    with pytest.raises(NameError):
+    with pytest.raises(ValueError):
         decide_rps("Rock", "Spock")

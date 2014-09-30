@@ -2,12 +2,11 @@
 
 """
     Perform a checksum on a UPC
-
     Assignment 1, Exercise 2, INF1340 Fall 2014
 """
 
 __author__ = 'Natasha Gandhi, Olena Kit'
-__email__ = "natasha's email, olena.kit@mail.utoronto.ca"
+__email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
 # imports one per line
 
@@ -24,46 +23,29 @@ def checksum(upc):
         ValueError if string is the wrong length (with error string stating how many digits are over or under
     """
 
-    def input(upc):
-        """
-        Check if the upc is the right type or right length.
-        :param upc: a 12-digit universal product code
-        :return: type ('string') or length
-        """
-        if input(upc) != str:
-            raise ValueError
-
-        print(input(17282))
-
-        return type
-
-        def len(upc):
-            return len
-
-
-    # check type of input
-
-    # raise TypeError if not string
+    #Check type of input
+    #Raise TypeError if not string
+    if type(upc) != str:
+        raise TypeError("TypeError. Input must be a string.")
 
     # check length of string
     # raise ValueError if not 12
+    if len(upc) != 12:
+        raise ValueError("ValueError. Input must be exactly 12 digits.")
 
     # convert string to array
-
     upc_list = list(upc)
 
     # convert list of strings to list of integers
-
-    up = [int (s) for s in upc_list]
+    up = [int(s) for s in upc_list]
 
     # generate checksum using the first 11 digits provided
-
     generate_checksum = (10-(((up[0]+up[2]+up[4]+up[6]+up[8]+up[10])*3)+(up[1]+up[3]+up[5]+up[7]+up[9]))%10)
 
     # check against the the twelfth digit
-
-
     # return True if they are equal, False otherwise
-
-    return False
+    if generate_checksum == up[11]:
+        return True
+    else:
+        return False
 

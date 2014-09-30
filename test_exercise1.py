@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 
-""" Module to test exercise1.py """
+"""
+Grade to gpa conversion
+Assignment 1, Exercise 1, INF1340, Fall, 2014.
+Module to test exercise1.py
+"""
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
-
-__copyright__ = "2014 Susan Sim"
-__license__ = "MIT License"
-
-__status__ = "Prototype"
+__author__ = 'Natasha Gandhi, Olena Kit'
+__email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
 # imports one per line
 from exercise1 import grade_to_gpa

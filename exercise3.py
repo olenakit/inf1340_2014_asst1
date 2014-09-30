@@ -22,6 +22,7 @@ __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 # Paper     Rock        Player1
 # Paper     Scissors    Player2
 
+
 def decide_rps(player1, player2):
 
     """
@@ -30,35 +31,26 @@ def decide_rps(player1, player2):
     :return: integer: The player that wins the game (if player1 wins = 1, if player2 wins = 2, if tie = 0)
     """
 
-#If player1 and player2 make the same decision, there is a tie so the function will return the integer 0.
-# For example: If player1 chooses "Rock" and player2 chooses "Rock", it will be a tie and the function will return 0.
-    if (player1 == player2):
-        return 0
+    #Create dictionary of all possible Rock, Paper, Scissors results.
+    # If player1 and player2 choose the same value, then it is a tie and the program will return the integer 0.
+    # If Player1 wins, the program will return the integer 1.
+    # If player2 wins, the program will return the integer 2.
 
-#If Player 1 wins then the function will return the integer 1.
-# For example: If player1 chooses "Rock" and player2 chooses "Scissors", player1 wins and then function will return 1.
-    if (player1==("Rock") and player2==("Scissors")) or (player1==("Scissors") and player2==("Paper")) or (player1==("Paper") and player2==("Rock")):
-        return 1
+    rps_results = {("Rock", "Rock"):0,
+                   ("Rock", "Scissors"):1,
+                   ("Rock", "Paper"):2,
+                   ("Scissors", "Scissors"):0,
+                   ("Scissors", "Paper"):1,
+                   ("Scissors", "Rock"):2,
+                   ("Paper", "Paper"):0,
+                   ("Paper", "Rock"):1,
+                   ("Paper", "Scissors"):2}
 
-#If Player2 wins then the function will return the integer 2.
-# For example: If player1 chooses "Rock" and player2 chooses "Paper", player2 wins and then function will return 2.
-    if (player1==("Rock") and player2==("Paper")) or (player1==("Paper") and player2==("Scissors")) or (player1==("Scissors") and player2==("Rock")):
-        return 2
+    # If a player gives the wrong type of value, there will be an error
+    if player1 or player2 != "Rock" or "Scissors" or "Paper":
+        raise ValueError ("Incorrect value. Player must choose Rock, Paper, or Scissors.")
 
-#If there is an error
+    #If there is no error, then the Rock, Paper, Scissors game can be decided
     else:
-        raise ValueError("Invalid name. Choose Rock, Paper, or Scissors.")
+        return rps_results() or decide_rps()
 
-
-rps_results = {}
-rps_results[("Rock", "Rock")] = 0
-rps_results[("Rock", "Scissors")] = 1
-rps_results[("Rock", "Paper")] = 2
-rps_results[("Scissors", "Scissors")] = 0
-rps_results[("Scissors", "Paper")] = 1
-rps_results[("Scissors", "Rock")] = 2
-rps_results[("Paper", "Paper")] = 0
-rps_results[("Paper", "Rock")] = 1
-rps_results[("Paper", "Scissors")] = 2
-
-return decide_rps()

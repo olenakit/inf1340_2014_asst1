@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-""" Assignment 1, Exercise 1, INF1340, Fall, 2014. Grade to gpa conversion
+"""
+Grade to gpa conversion
+Assignment 1, Exercise 1, INF1340, Fall, 2014.
 
 This module contains one function grade_to_gpa. It can be passed a parameter
 that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
@@ -12,12 +14,9 @@ Example:
 """
 
 __author__ = 'Natasha Gandhi, Olena Kit'
-__email__ = "natasha's email, olena.kit@mail.utoronto.ca"
+__email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
-__copyright__ = "2014 Natasha Gandhi and Olena Kit"
-__license__ = "MIT License"
 
-__status__ = "Prototype"
 
 # imports one per line
 
