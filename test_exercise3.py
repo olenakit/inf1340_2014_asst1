@@ -9,9 +9,12 @@ Module to test exercise3.py
 __author__ = 'Natasha Gandhi, Olena Kit'
 __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
-#Input the function decide_rps from exercise3.py
+#Importp pytest
+import pytest
 
+#Input the function decide_rps from exercise3.py
 from exercise3 import decide_rps
+
 
 def test_rps():
     """
@@ -29,5 +32,10 @@ def test_rps():
 
 # Inputs that are incorrect format and length
 
+    with pytest.raises(TypeError):
+        decide_rps("Rock", 1)
+        decide_rps(200, "Paper")
+        decide_rps("Scissors", 5.48)
     with pytest.raises(ValueError):
         decide_rps("Rock", "Spock")
+        decide_rps("Lizard", "Paper")

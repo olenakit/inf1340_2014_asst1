@@ -10,7 +10,10 @@ __author__ = 'Natasha Gandhi, Olena Kit'
 __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
 #Import function checksum from exercise2.py
+import pytest
+
 from exercise2 import checksum
+
 
 def test_checksum():
     """
@@ -19,8 +22,7 @@ def test_checksum():
     assert checksum("786936224306") is True
     assert checksum("085392132225") is True
     assert checksum("717951000841") is False
-    assert checksum("1234567890") is False
-    # other tests
+    assert checksum("")
 
 
 def test_input():
@@ -34,7 +36,4 @@ def test_input():
     with pytest.raises(ValueError):
         checksum("1")
         checksum("1234567890")
-
-    # other tests
-
-# add functions for any other tests
+        checksum("09876543210987")

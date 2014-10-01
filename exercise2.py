@@ -10,6 +10,7 @@ __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
 # imports one per line
 
+
 def checksum(upc):
     """
     Checks if the digits in a UPC is consistent with checksum
@@ -40,7 +41,7 @@ def checksum(upc):
     up = [int(s) for s in upc_list]
 
     # generate checksum using the first 11 digits provided
-    generate_checksum = (10-(((up[0]+up[2]+up[4]+up[6]+up[8]+up[10])*3)+(up[1]+up[3]+up[5]+up[7]+up[9]))%10)
+    generate_checksum = (10-(((up[0]+up[2]+up[4]+up[6]+up[8]+up[10])*3)+(up[1]+up[3]+up[5]+up[7]+up[9])) % 10)
 
     # check against the the twelfth digit
     # return True if they are equal, False otherwise
@@ -48,4 +49,3 @@ def checksum(upc):
         return True
     else:
         return False
-
