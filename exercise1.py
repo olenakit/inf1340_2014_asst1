@@ -16,8 +16,6 @@ Example:
 __author__ = 'Natasha Gandhi, Olena Kit'
 __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
-
-
 # imports one per line
 
 
@@ -39,30 +37,37 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-    letter_grade = "letter_to_gpa"
+    letter_grade = ""
     gpa = 0.0
 
-   if type(grade) is 'A':
-       print ("GPA is 3")
-   If type(grade) is  range (80,89):
-        print ("GPA is 3")
-
     if type(grade) is str:
-        print ("letter") # remove this line once the code is implemented
-        # check that the grade is one of the accepted values -- a to f
-        # assign grade to letter_grade
+        grade = letter_grade
     elif type(grade) is int:
-        print("mark") # remove this line once the code is implemented
+        if grade >= 90:
+            return "A+"
+        if grade >= 85:
+            return "A"
+        if grade >= 80:
+            return "A-"
+        if grade >= 77:
+            return "B+"
+        if grade >= 73:
+            return "B"
+        if grade >= 70:
+            return "B-"
+        if grade < 69:
+            return "FZ"
+
         # check that grade is in the accepted range 0 to 100
-        # convert the numeric grade to a letter grade  -- specify numbers 40=F
+        # convert the numeric grade to a letter grade
         # assign the value to letter_grade
         # hint: letter_grade = mark_to_letter(grade)
-    else:
-        # raise a TypeError exception
-        raise TypeError("Invalid type passed as parameter")
+        else:
+            raise TypeError("Invalid type passed as parameter")
 
     # write a long if-statement to convert letter_grade
     # assign the value to gpa
+
     if letter_grade == "A+":
         gpa = 4.0
     if letter_grade == "A":
@@ -72,7 +77,7 @@ def grade_to_gpa(grade):
     if letter_grade == "B+":
         gpa = 3.3
     if letter_grade == "B":
-        gpa == 3.0
+        gpa = 3.0
     if letter_grade == "B-":
         gpa = 2.7
     if letter_grade == "FZ":
@@ -80,7 +85,10 @@ def grade_to_gpa(grade):
 
     return gpa
 
+
 print(grade_to_gpa("A"))
+
+
 
 
 
