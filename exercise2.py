@@ -27,12 +27,12 @@ def checksum(upc):
     #Check type of input
     #Raise TypeError if not string
     if type(upc) != str:
-        raise TypeError("TypeError. Input must be a string.")
+        raise TypeError("Incorrect type. Input must be a string.")
 
     # check length of string
     # raise ValueError if not 12
     if len(upc) != 12:
-        raise ValueError("ValueError. Input must be exactly 12 digits.")
+        raise ValueError("Incorrect value. Input must be exactly 12 digits.")
 
     # convert string to array
     upc_list = list(upc)

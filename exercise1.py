@@ -17,10 +17,6 @@ __author__ = 'Natasha Gandhi, Olena Kit'
 __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
 
-
-# imports one per line
-
-
 def grade_to_gpa(grade):
     """
     Returns the UofT Graduate GPA for a given grade.
@@ -36,27 +32,53 @@ def grade_to_gpa(grade):
 
     :raises:
         TypeError if parameter is not a string or integer
-        ValueError if parameter is out of range
+        ValueError if parameter is out of range or not an accepted value
     """
 
-    letter_grade = "letter_to_gpa"
+
+    letter_grade = ""
     gpa = 0.0
 
-   if type(grade) is 'A':
-       print ("GPA is 3")
-   If type(grade) is  range (80,89):
-        print ("GPA is 3")
-
     if type(grade) is str:
-        print ("letter") # remove this line once the code is implemented
-        # check that the grade is one of the accepted values -- a to f
+        accepted_values = ["A+", "A", "A-", "B+", "B", "B-", "FZ"]
+
+        # check that the grade is one of the accepted values
+        if grade in accepted_values:
+
         # assign grade to letter_grade
+            letter_grade = grade
+
+        #If grade input is a string, but not an accepted value, raise a ValueError
+        else:
+            raise ValueError("Incorrect value. Grade must be an accepted letter grade.")
+
     elif type(grade) is int:
-        print("mark") # remove this line once the code is implemented
+
         # check that grade is in the accepted range 0 to 100
-        # convert the numeric grade to a letter grade  -- specify numbers 40=F
+        if (0 <= grade <= 100):
+
+        # convert the numeric grade to a letter grade
+            mark_to_letter = grade
+
         # assign the value to letter_grade
         # hint: letter_grade = mark_to_letter(grade)
+            if mark_to_letter >= 90:
+                letter_grade = "A+"
+            if mark_to_letter >= 85:
+                letter_grade = "A"
+            if mark_to_letter >= 80:
+                letter_grade = "A-"
+            if mark_to_letter >= 77:
+                letter_grade = "B+"
+            if mark_to_letter >= 73:
+                letter_grade = "B"
+            if mark_to_letter >= 70:
+                letter_grade = "B-"
+            else:
+                letter_grade = "FZ"
+
+        else:
+            raise ValueError("Incorrect value. Grade must be in the accepted range of 0 to 100.")
     else:
         # raise a TypeError exception
         raise TypeError("Invalid type passed as parameter")
@@ -72,7 +94,7 @@ def grade_to_gpa(grade):
     if letter_grade == "B+":
         gpa = 3.3
     if letter_grade == "B":
-        gpa == 3.0
+        gpa = 3.0
     if letter_grade == "B-":
         gpa = 2.7
     if letter_grade == "FZ":
@@ -81,6 +103,7 @@ def grade_to_gpa(grade):
     return gpa
 
 print(grade_to_gpa("A"))
+print(grade_to_gpa(83))
 
 
 

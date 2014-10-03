@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
 """
-Rock, Paper, Scissors
-Assignment 1, Exercise 3, INF1340, Fall, 2014.
-Module to test exercise3.py
+    Rock, Paper, Scissors
+    Assignment 1, Exercise 3, INF1340, Fall, 2014.
+    Module to test exercise3.py
 """
 
 __author__ = 'Natasha Gandhi, Olena Kit'
 __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
-#Importp pytest
+#Import pytest
 import pytest
 
 #Input the function decide_rps from exercise3.py
@@ -23,7 +23,7 @@ def test_rps():
     assert decide_rps("Rock", "Paper") == 2
     assert decide_rps("Rock", "Scissors") == 1
     assert decide_rps("Rock", "Rock") == 0
-    assert decide_rps("Scissors", "Paper") == 2
+    assert decide_rps("Scissors", "Rock") == 2
     assert decide_rps("Scissors", "Paper") == 1
     assert decide_rps("Scissors", "Scissors") == 0
     assert decide_rps("Paper", "Scissors") == 2
