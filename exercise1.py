@@ -35,7 +35,6 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range or not an accepted value
     """
 
-
     letter_grade = ""
     gpa = 0.0
 
@@ -55,7 +54,7 @@ def grade_to_gpa(grade):
     elif type(grade) is int:
 
         # check that grade is in the accepted range 0 to 100
-        if (0 <= grade <= 100):
+        if 0 <= grade <= 100:
 
         # convert the numeric grade to a letter grade
             mark_to_letter = grade
@@ -64,15 +63,15 @@ def grade_to_gpa(grade):
         # hint: letter_grade = mark_to_letter(grade)
             if mark_to_letter >= 90:
                 letter_grade = "A+"
-            if mark_to_letter >= 85:
+            elif mark_to_letter >= 85:
                 letter_grade = "A"
-            if mark_to_letter >= 80:
+            elif mark_to_letter >= 80:
                 letter_grade = "A-"
-            if mark_to_letter >= 77:
+            elif mark_to_letter >= 77:
                 letter_grade = "B+"
-            if mark_to_letter >= 73:
+            elif mark_to_letter >= 73:
                 letter_grade = "B"
-            if mark_to_letter >= 70:
+            elif mark_to_letter >= 70:
                 letter_grade = "B-"
             else:
                 letter_grade = "FZ"
@@ -103,7 +102,7 @@ def grade_to_gpa(grade):
     return gpa
 
 print(grade_to_gpa("A"))
-print(grade_to_gpa(83))
+print(grade_to_gpa(80))
 
 
 
