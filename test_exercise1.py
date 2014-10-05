@@ -9,6 +9,10 @@ Module to test exercise1.py
 __author__ = 'Natasha Gandhi, Olena Kit'
 __email__ = "tash.gandhi@mail.utoronto.ca, olena.kit@mail.utoronto.ca"
 
+
+#import pytest
+import pytest
+
 # imports one per line
 from exercise1 import grade_to_gpa
 
@@ -27,7 +31,8 @@ def test_letter_grade():
     
     with pytest.raises(ValueError):
         grade_to_gpa("q")
-    # add more tests for invalid values
+        grade_to_gpa("z")
+        grade_to_gpa("Grade")
 
 
 def test_percentage_grade():
@@ -65,6 +70,7 @@ def test_percentage_grade():
     with pytest.raises(ValueError):
         grade_to_gpa(101)
         grade_to_gpa(-1)
+        grade_to_gpa(200)
 
 
 def test_float_input():
@@ -73,5 +79,4 @@ def test_float_input():
     """
     with pytest.raises(TypeError):
         grade_to_gpa(82.5)
-
-# add functions for any other tests
+        grade_to_gpa(0.05)

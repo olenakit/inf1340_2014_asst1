@@ -76,6 +76,7 @@ def grade_to_gpa(grade):
             else:
                 letter_grade = "FZ"
 
+        #If grade input is not in accepted range, raise ValueError
         else:
             raise ValueError("Incorrect value. Grade must be in the accepted range of 0 to 100.")
     else:
@@ -99,11 +100,5 @@ def grade_to_gpa(grade):
     if letter_grade == "FZ":
         gpa = 0.0
 
+    #Return the gpa of the grade
     return gpa
-
-print(grade_to_gpa("A"))
-print(grade_to_gpa(80))
-
-
-
-

@@ -55,7 +55,7 @@ def decide_rps(player1, player2):
     if type(player1) != str or type(player2) != str:
         raise TypeError("Incorrect type. Player1 must choose Rock, Paper, or Scissors.")
 
-    #If player1 or player2 is not Rock, Paper, or Scissors then raise ValueError   ### FIX THIS ONE ###
+    #If player1 or player2 is not Rock, Paper, or Scissors then raise ValueError
     if player1 not in rps_list:
         raise ValueError("Incorrect value. Player must choose Rock, Paper, or Scissors.")
     if player2 not in rps_list:
