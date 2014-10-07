@@ -34,8 +34,11 @@ def test_rps():
 
     with pytest.raises(TypeError):
         decide_rps("Rock", 1)
+    with pytest.raises(TypeError):
         decide_rps(200, "Paper")
+    with pytest.raises(TypeError):
         decide_rps("Scissors", 5.48)
     with pytest.raises(ValueError):
         decide_rps("Rock", "Spock")
+    with pytest.raises(ValueError):
         decide_rps("Lizard", "Paper")
